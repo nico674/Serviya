@@ -1,0 +1,149 @@
+/*Tenemos nuestro tipo de letras roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,100&display=swap');
+@import 'mediaqueries.css';
+/*Creamos stylos por defecto*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+/*Colocamos nuestra imágen de fondo*/
+.hero{
+    width: 100vw; 
+    max-width: 100%;
+
+}
+.navbar .menu-toggle{/*Con esta clase traemos de vuelta a nuestro menu.*/
+    transform: translateY(0%);
+    z-index: 200; /*trae el menú delante del formulario*/
+}
+
+.navbar{
+    grid-template-columns: repeat(9, 1fr);
+    padding: 30px;
+    background-color: #130802;/*Cambia el color del header*/
+}
+
+.navbar .brand{
+    color: #fdf7f7;
+    margin-top: 10px;
+    background-image: url(logo.png);
+
+}
+
+/*distribuimos horizontalmente el menu*/
+.navbar .menu{
+    grid-column: 6/9;
+    display:flex;
+    margin-top: 15px;
+}
+
+/*Desaparece los punticos de los items de separación*/
+.menu li{
+    list-style: none;
+}
+
+/*Ingresamos a nuestros enlaces directamente */
+.menu li a{
+    text-decoration: none;/*Desaparece la línea de por debajo*/
+    margin-right: 3em;/*Separación de los menú*/
+    font-size: 1.3em;/*Incrementa el tamaño de la letra*/
+    color: rgb(255, 245, 245); /*Color de la letra*/
+    font-weight: 200;/*resalta el texto*/
+    padding: 10px 20px;
+}
+
+.menu li a:hover{/*Cuando coloquemos el puntero encima cambia de color.*/
+    background-color:  #f8540d;
+    transition: all .10s;/*Colocamos un transition de 5 segundos.*/
+    color: #000;/*Color de la letra*/
+}
+
+/*Con está le dicimos que desaparezca las 3 liniecitas y aparezca*/
+.menu-bar{
+    display: none;
+    color: #fff;/*Color de la líneas*/
+}
+
+/*FORMULARIO SECTION*/
+
+h1{
+    padding-left: 12px;
+}
+
+.formulario{
+    width: 400px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;/*Espacio entre el borde la pantalla y el form*/
+    padding: 10px; /*Espacio entre el borde del form y los campos de texto, efecto de alargue de la caja de formulario*/
+    background-color:  #fa9829;
+}
+.formulario_titulo{
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7);
+}
+.formulario_input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 1.3em;
+    outline: none; /*quitar el bordillo resaltado*/
+    border: 1px solid #CCC;    
+}
+.formulario_input{
+    padding: 20px;/* alto de los campos de texto*/
+    border: 1 px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px; 
+}
+.formulario_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    max-width: 50%;
+    color:rgba(0, 0, 0, 0.7);
+    /* colocar después de la animación de focus +*/
+    transition: all 0.4s;
+}
+.cargue{
+    padding: 10px;/* alto de los campos de texto*/
+    display: block;
+    color: #000; 
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.btn-reg{
+    margin: 20px;
+    width: 25%;
+    height: 30px; 
+    border-radius: 20px;  
+    cursor: pointer;/*Cambiar el cursor al situarse en el botón*/
+    box-shadow: 0px 3px 14px 8px rgba(219, 140, 5, 0.78); 
+}
+/*ANIMACIÓN*/
+
+.formulario_input:focus{
+    outline: 1PX solid rgba(0,0,0,0.7);
+    }
+    .formulario_input:focus +.formulario_label{
+        margin-top: -110px;
+        } 
+        /* después de esto colocar transition en formulario_label*/
+    
+        /* fijar se crea después de haberla creado en js*/
+        
+        .fijar {
+            margin-top: -110px;
+        }
+        .color {
+            background-color:azure ;
+        }
